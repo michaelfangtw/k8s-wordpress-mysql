@@ -2,6 +2,12 @@ secretGenerator:
 - name: mysql-pass
   literals:
   - password=YOUR_PASSWORD
+
+configMapGenerator:
+- name: php-config
+  files:
+  - php-config.ini
+
 resources:
   - mysql-deployment.yaml
   - wordpress-deployment.yaml
